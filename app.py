@@ -1,3 +1,6 @@
+"""
+Main script to display all streamlit views
+"""
 import streamlit as st
 
 from views.home import HomepageView
@@ -8,12 +11,18 @@ views_list = [
     NlpView
     ]
 views_dict = {
-    view.name: view()
-     for view in views_list
-     }
+    view.get_name(): view()
+    for view in views_list
+}
 
 def main():
-    page = st.sidebar.selectbox("Choose a page", list(views_dict.keys()))
+    """
+    main method
+    """
+    page = st.sidebar.selectbox(
+        "Choose a page",
+        options=list(views_dict.keys())
+    )
     views_dict[page].display()
        
 
