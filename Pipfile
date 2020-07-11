@@ -12,6 +12,8 @@ seaborn = "*"
 matplotlib = "*"
 scikit-learn = "*"
 numpy = "*"
+vadersentiment = "*"
+textblob = "*"
 
 [requires]
 python_version = "3.8"

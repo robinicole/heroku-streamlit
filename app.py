@@ -5,11 +5,13 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import train_test_split
 from views.home import HomepageView
+from views.nlp import NlpView
 
-views_list = [HomepageView]
+views_list = [
+    HomepageView,
+    NlpView
+    ]
 views_dict = {
     view.name: view()
      for view in views_list
